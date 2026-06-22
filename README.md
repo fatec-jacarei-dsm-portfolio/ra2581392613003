@@ -1,6 +1,6 @@
 # Portfólio de Projetos - Fatec Jacareí
 
-**Aluno:** Patricia Rosa Maidana 
+**Aluno:** Patricia Rosa Maidana  
 **Curso:** Desenvolvimento de Software Multiplataforma  
 **Turma:** Ingresso 1 sem/2026
 
