@@ -1,0 +1,31 @@
+{
+  "name": "ra2581392613003",
+  "version": "1.0.0",
+  "description": "**Aluno:** Patricia Rosa Maidana  \r **Curso:** Desenvolvimento de Software Multiplataforma  \r **Turma:** Ingresso 1 sem/2026",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "node --watch ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatec-jacarei-dsm-portfolio/ra2581392613003.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fatec-jacarei-dsm-portfolio/ra2581392613003/issues"
+  },
+  "homepage": "https://github.com/fatec-jacarei-dsm-portfolio/ra2581392613003#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}

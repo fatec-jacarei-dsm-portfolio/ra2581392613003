@@ -1,11 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Porfolio</title>
+    <meta
+      name="description"
+      content="Portfólio de Patricia Rosa Maidana, estudante de Desenvolvimento de Software Multiplataforma."
+    />
+    <title>Patricia Rosa Maidana | Portfólio</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/menu.js" defer></script>
   </head>
-  <body>
-    Patricia Rosa Maidana
+  <body class="home">
+    <main class="home-main">
+      <p class="eyebrow">FATEC Jacareí · DSM</p>
+
+      <section class="phoenix-area" aria-label="Navegação do portfólio">
+        <nav
+          class="orbital-menu"
+          id="orbital-menu"
+          aria-label="Seções do portfólio"
+        >
+          <a class="orbit orbit-1" href="sobre-mim/" aria-label="Sobre mim">
+            <span class="orbit-icon" aria-hidden="true">👤</span>
+            <span class="orbit-label">Sobre mim</span>
+          </a>
+          <a class="orbit orbit-2" href="evolucao/" aria-label="Minha evolução">
+            <span class="orbit-icon" aria-hidden="true">↗</span>
+            <span class="orbit-label">Minha evolução</span>
+          </a>
+          <a class="orbit orbit-3" href="tecnologias/" aria-label="Tecnologias">
+            <span class="orbit-icon" aria-hidden="true">&lt;/&gt;</span>
+            <span class="orbit-label">Tecnologias</span>
+          </a>
+          <a class="orbit orbit-4" href="formacao/" aria-label="Formação">
+            <span class="orbit-icon" aria-hidden="true">🎓</span>
+            <span class="orbit-label">Formação</span>
+          </a>
+          <a class="orbit orbit-5" href="contato/" aria-label="Contato">
+            <span class="orbit-icon" aria-hidden="true">✉</span>
+            <span class="orbit-label">Contato</span>
+          </a>
+        </nav>
+        <button
+          class="phoenix-button"
+          id="phoenix-button"
+          aria-expanded="false"
+          aria-controls="orbital-menu"
+          aria-label="Abrir menu do portfólio"
+        >
+          <span class="phoenix-glow" aria-hidden="true"></span>
+          <img src="assets/img/fenix_aberta.png" alt="" />
+          <span class="sr-only">Abrir menu</span>
+        </button>
+      </section>
+      <p class="hint" id="menu-hint">Toque ou clique para abrir</p>
+      <p class="assinatura">Patricia Rosa Maidana</p>
+    </main>
   </body>
 </html>
