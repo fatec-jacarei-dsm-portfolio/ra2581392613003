@@ -118,7 +118,7 @@ a {
 .phoenix-button {
   position: relative;
   z-index: 2;
-  width: min(100%, clamp(190px, 39vw, 360px));
+  width: min(100%, clamp(160px, 30vw, 300px));
   aspect-ratio: 1;
   padding: 0;
   border: 0;
@@ -204,9 +204,9 @@ a {
   width: clamp(48px, 6vw, 70px);
   aspect-ratio: 1;
   padding: 0.5rem;
-  border: 1px solid var(--line);
+  border: 0px solid var(--line);
   border-radius: 50%;
-  background: rgba(83, 39, 39, 0.85);
+  background: rgba(0, 0, 0, 0.15);
   color: var(--ink);
   font-size: clamp(0.61rem, 1.1vw, 0.75rem);
   line-height: 1.3;
@@ -230,8 +230,8 @@ a {
   top: calc(100% + 0.7rem);
   padding: 0.35rem 0.55rem;
   border-radius: 3px;
-  background: var(--wine);
-  color: #fff;
+  background: rgba(0, 0, 0, 1.65);
+  color: hsl(20, 67%, 96%);
   font-size: 0.65rem;
   white-space: nowrap;
   opacity: 0;
@@ -255,9 +255,8 @@ a {
 
 .orbit:hover,
 .orbit:focus-visible {
-  background: var(--wine);
-  color: #fff;
-  outline: none;
+  background: transparent;
+  color: #feb18e 
 }
 
 .orbital-menu.is-open {
@@ -266,36 +265,38 @@ a {
 
 .orbital-menu.is-open .orbit {
   opacity: 1;
+  /* Os links ficam acima da área clicável, porém transparente, da fênix. */
+  z-index: 3;
   transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1);
 }
 
 .orbit-1 {
-  --x: -220px;
-  --y: -85px;
+  --x: -150px;
+  --y: -70px;
   transition-delay: 0.02s;
 }
 
 .orbit-2 {
   --x: 0px;
-  --y: -190px;
+  --y: -165px;
   transition-delay: 0.08s;
 }
 
 .orbit-3 {
-  --x: 220px;
-  --y: -85px;
+  --x: 150px;
+  --y: -70px;
   transition-delay: 0.14s;
 }
 
 .orbit-4 {
-  --x: 170px;
-  --y: 130px;
+  --x: 125px;
+  --y: 90px;
   transition-delay: 0.2s;
 }
 
 .orbit-5 {
-  --x: -170px;
-  --y: 130px;
+  --x: -125px;
+  --y: 90px;
   transition-delay: 0.26s;
 }
 
