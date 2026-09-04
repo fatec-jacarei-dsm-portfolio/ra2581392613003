@@ -300,6 +300,12 @@ a {
   transition-delay: 0.26s;
 }
 
+.orbit-6 {
+  --x: 0;
+  --y: 165px;
+  transition-delay: 0.32s;
+}
+
 .hint {
   margin: 3.5rem 0 0;
   min-height: 1.5rem;
@@ -314,9 +320,9 @@ a {
 }
 
 .site-header {
-  max-width: 1120px;
+  max-width: none;
   margin: auto;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -325,11 +331,9 @@ a {
 }
 
 .brand {
-  color: var(--wine);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  text-decoration: none;
+  background: url("../assets/img/fenix_aberta.png") no-repeat center/contain;
+  width: 72px;
+  height: 44px;
 }
 
 .back-link {
@@ -500,6 +504,10 @@ a {
   .orbit-5 {
     --x: -105px;
     --y: 105px;
+  }
+  .orbit-6 {
+    --x: 0;
+    --y: 145px;
   }
   .site-header {
     padding: 1.25rem;
