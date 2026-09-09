@@ -272,37 +272,37 @@ a {
 
 .orbit-1 {
   --x: -150px;
-  --y: -70px;
+  --y: -20px;
   transition-delay: 0.02s;
 }
 
 .orbit-2 {
-  --x: 0px;
-  --y: -165px;
+  --x: -75px;
+  --y: -155px;
   transition-delay: 0.08s;
 }
 
 .orbit-3 {
   --x: 150px;
-  --y: -70px;
+  --y: -20px;
   transition-delay: 0.14s;
 }
 
 .orbit-4 {
-  --x: 125px;
-  --y: 90px;
+  --x: 75px;
+  --y: 110px;
   transition-delay: 0.2s;
 }
 
 .orbit-5 {
-  --x: -125px;
-  --y: 90px;
+  --x: -75px;
+  --y: 110px;
   transition-delay: 0.26s;
 }
 
 .orbit-6 {
-  --x: 0;
-  --y: 165px;
+  --x: 75px;
+  --y: -155px;
   transition-delay: 0.32s;
 }
 
