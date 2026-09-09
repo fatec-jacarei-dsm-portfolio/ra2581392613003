@@ -9,7 +9,7 @@
   /* detalhes laranja */
   --gold: #f5ae3d;
   /* brilho dourado */
-  --wine: #db4660;
+  --wine: rgba(232, 48, 48, 0.943);  
   /* links e detalhes */
   --line: rgba(248, 242, 233, 0.22);
 }
@@ -55,7 +55,7 @@ a {
   text-transform: uppercase;
 }
 
-.assinatura{
+.assinatura {
   position: fixed;
   right: 2rem;
   bottom: 1.5rem;
@@ -67,6 +67,11 @@ a {
   font-weight: 500;
   letter-spacing: 0.11em;
   text-transform: uppercase;
+}
+
+.assinatura-link {
+  color: var(--wine);
+  text-decoration: none;
 }
 
 .home {
@@ -257,7 +262,7 @@ a {
 .orbit:hover,
 .orbit:focus-visible {
   background: transparent;
-  color: #feb18e 
+  color: #feb18e;
 }
 
 .orbital-menu.is-open {
@@ -317,7 +322,29 @@ a {
 }
 
 .page-body {
-  background: linear-gradient(115deg, #000 0 70%, #241008 70%);
+  /* 44px da logo + 2rem de padding vertical + 1px da borda do header. */
+  --header-height: 77px;
+  background: #000;
+}
+
+.page-body::before {
+  content: "";
+  position: fixed;
+  /* A camada da fênix começa abaixo do header e permanece fixa ao rolar. */
+  inset: var(--header-height) 0 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("img/fenix_aberta.png");
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 3rem);
+  background-size: min(50vw, 550px);
+  opacity: 0.07;
+}
+
+.page-body > * {
+  position: relative;
+  z-index: 1;
 }
 
 .site-header {
@@ -355,16 +382,16 @@ a {
 }
 
 .content h1 {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0.75rem 0 1.5rem;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 0.94;
   letter-spacing: -0.06em;
 }
 
 .lead {
-  max-width: 680px;
+  max-width: 900px;
   margin: 0;
   font-family: Georgia, serif;
   font-size: clamp(1.15rem, 2vw, 1.45rem);
@@ -376,6 +403,27 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1rem;
   margin-top: 3rem;
+}
+
+.card-image{
+  gap: 1.5rem;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project-image-link {
+  display: block;
+  margin-top: 1rem;
+}
+
+.project-image-link:hover .card-image {
+  filter: brightness(1.12);
+}
+
+.project-image-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .card {
@@ -450,8 +498,23 @@ a {
 
 .contact-list a {
   padding: 1rem 1.2rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 0px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
+}
+
+.contact-link-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
 }
 
 .contact-list a:hover {
@@ -461,15 +524,38 @@ a {
 
 /* Tablets e janelas menores: mesma distribuição do desktop, em menor escala. */
 @media (min-width: 651px) and (max-width: 900px) {
-  .orbit-1 { --x: -128px; --y: -17px; }
-  .orbit-2 { --x: -64px; --y: -132px; }
-  .orbit-3 { --x: 128px; --y: -17px; }
-  .orbit-4 { --x: 64px; --y: 94px; }
-  .orbit-5 { --x: -64px; --y: 94px; }
-  .orbit-6 { --x: 64px; --y: -132px; }
+  .orbit-1 {
+    --x: -128px;
+    --y: -17px;
+  }
+  .orbit-2 {
+    --x: -64px;
+    --y: -132px;
+  }
+  .orbit-3 {
+    --x: 128px;
+    --y: -17px;
+  }
+  .orbit-4 {
+    --x: 64px;
+    --y: 94px;
+  }
+  .orbit-5 {
+    --x: -64px;
+    --y: 94px;
+  }
+  .orbit-6 {
+    --x: 64px;
+    --y: -132px;
+  }
 }
 
 @media (max-width: 650px) {
+  .page-body {
+    /* No celular, o header usa 1.25rem de padding vertical. */
+    --header-height: 85px;
+  }
+
   .home-main {
     padding-top: 3.3rem;
   }
