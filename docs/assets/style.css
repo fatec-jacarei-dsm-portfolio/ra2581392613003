@@ -107,6 +107,7 @@ a {
   position: relative;
   display: grid;
   place-items: center;
+  container-type: inline-size;
   /* A imagem respeita tanto a largura quanto a altura disponível. */
   width: min(88vw, 670px, 68svh);
   max-width: 100%;
@@ -489,35 +490,35 @@ a {
   }
 
   .orbit {
-    width: 52px;
+    width: clamp(44px, 14cqw, 52px);
     font-size: 0.5rem;
   }
 
   .orbit-1 {
-    --x: -108px;
-    --y: -14px;
+    --x: -30cqw;
+    --y: -4cqw;
   }
 
   .orbit-2 {
-    --x: -54px;
-    --y: -112px;
+    --x: -15cqw;
+    --y: -31cqw;
   }
 
   .orbit-3 {
-    --x: 108px;
-    --y: -14px;
+    --x: 30cqw;
+    --y: -4cqw;
   }
   .orbit-4 {
-    --x: 54px;
-    --y: 79px;
+    --x: 15cqw;
+    --y: 22cqw;
   }
   .orbit-5 {
-    --x: -54px;
-    --y: 79px;
+    --x: -15cqw;
+    --y: 22cqw;
   }
   .orbit-6 {
-    --x: 54px;
-    --y: -112px;
+    --x: 15cqw;
+    --y: -31cqw;
   }
   .site-header {
     padding: 1.25rem;
