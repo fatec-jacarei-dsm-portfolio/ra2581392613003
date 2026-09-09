@@ -458,6 +458,16 @@ a {
   background: rgba(255, 255, 255, 0.35);
 }
 
+/* Tablets e janelas menores: mesma distribuição do desktop, em menor escala. */
+@media (min-width: 651px) and (max-width: 900px) {
+  .orbit-1 { --x: -128px; --y: -17px; }
+  .orbit-2 { --x: -64px; --y: -132px; }
+  .orbit-3 { --x: 128px; --y: -17px; }
+  .orbit-4 { --x: 64px; --y: 94px; }
+  .orbit-5 { --x: -64px; --y: 94px; }
+  .orbit-6 { --x: 64px; --y: -132px; }
+}
+
 @media (max-width: 650px) {
   .home-main {
     padding-top: 3.3rem;
@@ -484,30 +494,30 @@ a {
   }
 
   .orbit-1 {
-    --x: -120px;
-    --y: -92px;
+    --x: -108px;
+    --y: -14px;
   }
 
   .orbit-2 {
-    --x: 0;
-    --y: -135px;
+    --x: -54px;
+    --y: -112px;
   }
 
   .orbit-3 {
-    --x: 120px;
-    --y: -92px;
+    --x: 108px;
+    --y: -14px;
   }
   .orbit-4 {
-    --x: 105px;
-    --y: 105px;
+    --x: 54px;
+    --y: 79px;
   }
   .orbit-5 {
-    --x: -105px;
-    --y: 105px;
+    --x: -54px;
+    --y: 79px;
   }
   .orbit-6 {
-    --x: 0;
-    --y: 145px;
+    --x: 54px;
+    --y: -112px;
   }
   .site-header {
     padding: 1.25rem;
