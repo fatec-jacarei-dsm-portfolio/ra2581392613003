@@ -2,13 +2,13 @@
 
 **Aluno:** Patricia Rosa Maidana  
 **Curso:** Desenvolvimento de Software Multiplataforma  
-**Turma:** Ingresso 1 sem/2026
+**Turma:** Ingresso 1º Sem/2026
 
 ---
 
 **Portfólio Online**
 
-🔗 [Acesse o Portfólio](LINK_PARA_PORTFOLIO)
+🔗 [Acesse o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613003/)
 
 ---
 
