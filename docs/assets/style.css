@@ -508,38 +508,6 @@ p{
   line-height: 1.55;
 }
 
-.contact-list {
-  display: grid;
-  gap: 0.8rem;
-  max-width: 570px;
-  margin-top: 3rem;
-}
-
-.contact-list a {
-  padding: 1rem 1.2rem;
-  border-bottom: 0px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-}
-
-.contact-link-text {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.social-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: currentColor;
-}
-
-.contact-list a:hover {
-  color: var(--wine);
-  background: rgba(255, 255, 255, 0.35);
-}
 
 /* Tablets e janelas menores: mesma distribuição do desktop, em menor escala. */
 @media (min-width: 651px) and (max-width: 900px) {

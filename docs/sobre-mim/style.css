@@ -1,0 +1,217 @@
+:root {
+  --ink: #f8f2e9;
+  /* textos */
+  --paper: #000000;
+  /* fundo */
+  --gold: #f5ae3d;
+  /* brilho dourado */
+  --wine: rgba(232, 48, 48, 0.943);  
+  /* links e detalhes */
+  --line: rgba(248, 242, 233, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--paper);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+p{
+  font-family: verdana, sans-serif;
+  padding: 6.5px; 
+  text-align: justify;
+}
+
+strong{
+  color: chocolate;
+}
+
+li{
+  font-family: verdana, sans-serif;
+  padding: 5px; 
+  text-align: justify;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--wine);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.page-body {
+  /* 44px da logo + 2rem de padding vertical + 1px da borda do header. */
+  --header-height: 77px;
+  background: #000;
+}
+
+.page-body::before {
+  content: "";
+  position: fixed;
+  /* A camada da fênix começa abaixo do header e permanece fixa ao rolar. */
+  inset: var(--header-height) 0 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("../assets/img/fenix_aberta.png");
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 3rem);
+  background-size: min(50vw, 550px);
+  opacity: 0.07;
+}
+
+.page-body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header {
+  max-width: none;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  background: url("../assets/img/fenix_aberta.png") no-repeat center/contain;
+  width: 72px;
+  height: 44px;
+}
+
+.back-link {
+  font-size: 0.72rem;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--wine);
+  text-decoration: underline;
+}
+
+.content {
+  max-width: 1120px;
+  min-height: calc(100vh - 88px);
+  margin: auto;
+  padding: clamp(3rem, 8vw, 7rem) 2rem;
+}
+
+.content h1 {
+  max-width: 900px;
+  margin: 0.75rem 0 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+
+.lead {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.55;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-inline: auto;
+  border-radius: 12px;
+}
+
+.project-image-link {
+  display: block;
+  margin-top: 1rem;
+}
+
+.project-image-link:hover .card-image {
+  filter: brightness(1.12);
+}
+
+.project-image-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.card {
+  min-height: 150px;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.card h2 {
+  margin: 0 0 0.7rem;
+  color: var(--wine);
+  font-size: 1rem;
+}
+
+.card p,
+.card li {
+  line-height: 1.8;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card ul {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  column-gap: 2rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+@media (max-width: 480px) {
+  .card ul {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .page-body {
+    /* No celular, o header usa 1.25rem de padding vertical. */
+    --header-height: 85px;
+  }
+
+  .site-header {
+    padding: 1.25rem;
+  }
+
+  .content {
+    padding: 4rem 1.25rem;
+  }
+}
