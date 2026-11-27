@@ -117,9 +117,8 @@ li{
 
 .content {
   max-width: 1120px;
-  min-height: calc(100vh - var(--header-height) - 44px - 2rem);
   margin: auto;
-  padding: clamp(3rem, 8vw, 7rem) 2rem;
+  padding: clamp(3rem, 8vw, 7rem) 2rem 2rem;
 }
 
 .content h1 {
@@ -266,6 +265,6 @@ li{
   }
 
   .content {
-    padding: 4rem 1.25rem;
+    padding: 4rem 1.25rem 1.5rem;
   }
 }
